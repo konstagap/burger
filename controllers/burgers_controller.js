@@ -28,7 +28,10 @@ router.post("/api/burgers", function(req, res) {
 
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
-
+  // we got req.body.devoured as false cause it was not eaten,
+  //as we updating state we have to change value to true 
+  //and pass changes to server, if no changes were made its gonna send 404
+  req.body.devoured = true;
   // console.log(req.body);
 
   burger.update({

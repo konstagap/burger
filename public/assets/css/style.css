@@ -1,7 +1,10 @@
 li {
+  font-size: 1.2em;
+  font-weight: normal;
   padding: 5px;
   margin: 5px;
   background: #faebd7;
+  list-style: none;
 }
 
 .label {
