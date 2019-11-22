@@ -21,6 +21,19 @@ $(function() {
     );
   });
 
+  $(".delete").on("click", function(event) {
+    var id = $(this).data("id");
+    // Send the PUT request.
+    $.ajax("/api/burgers/delete/" + id, {
+      type: "DELETE"
+    }).then(
+      function() {
+        console.log("Deleted");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
   $(".create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();

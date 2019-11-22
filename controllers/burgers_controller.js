@@ -26,6 +26,13 @@ router.post("/api/burgers", function(req, res) {
   });
 });
 
+router.delete("/api/burgers/delete/:id", function(req, res) {
+  var condition = "id = "+req.params.id;
+
+  burger.delete(condition, function() {
+    res.status(200).end();
+  })
+})
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
   // we got req.body.devoured as false cause it was not eaten,
