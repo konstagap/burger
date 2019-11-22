@@ -29,7 +29,6 @@
   <div class="row text-center">
     <div class="col-md-6">
       <h4>Burgers served</h4>
-      
       <ul>
         {{#each burger}}
         {{#unless devoured}}
@@ -45,12 +44,14 @@
     </div>
     <div class="col-md-6">
       <h4>Eaten Burgers</h4>
-
       <ul>
         {{#each burger}}
         {{#if devoured}}
         <li>
           <i>{{burger_name}}</i>
+            <button class="delete btn btn-danger" data-id="{{id}}">
+            Delete
+          </button>
         </li>
         {{/if}}
         {{/each}}
