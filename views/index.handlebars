@@ -1,33 +1,42 @@
- <nav class="navbar bg-secondary navbar-light bg-light shadow mb-3 ">
-  <a class="navbar-brand " href="/"><h2><strong>EAT A BURGER</strong> </h2></a>
+<nav class="navbar bg-secondary navbar-light bg-light shadow mb-3 ">
+  <a class="navbar-brand " href="/">
+    <h2><strong>EAT A BURGER</strong> </h2>
+  </a>
 </nav>
 <div class="container">
   <div class="row mt-5">
     <div class="col-md-12 text-center">
-      <p class="text-muted">This app is a burger logger with <strong> MySQL, Node, Express, Handlebars</strong> and a homemade <strong>ORM</strong>  following the <strong> MVC</strong> design pattern; using Node and MySQL to query and route data in app, and Handlebars to generate HTML.</p>
+      <p class="text-muted">This app is a burger logger with <strong> MySQL, Node, Express, Handlebars</strong> and a
+        homemade <strong>ORM</strong> following the <strong> MVC</strong> design pattern; using Node and MySQL to query
+        and route data in app, and Handlebars to generate HTML.</p>
     </div>
   </div>
+    <hr>
   <div class="row text-center">
     <div class="col-md-12">
       <form class="create-form">
         <div class="form-group">
-          <label for="ca"><h3>Order burger here:</h3></label>
+          <label for="ca">
+            <h3>Order burger here:</h3> 
+          </label>
           <input type="text" id="ca" name="name">
-        <button type="submit" class="btn btn-secondary">Order Up</button>
+          <button type="submit" class="btn btn-secondary">Order Up</button>
         </div>
       </form>
     </div>
   </div>
+    <hr>
   <div class="row text-center">
     <div class="col-md-6">
       <h4>Burgers served</h4>
+      
       <ul>
         {{#each burger}}
         {{#unless devoured}}
         <li>
-         <span class="mr-3">Burger name : <strong>{{burger_name}}</strong> </span> 
+          <span class="mr-3">Burger name : <strong>{{burger_name}}</strong> </span>
           <button class="devoured btn btn-success" data-id="{{id}}" data-devoured="{{devoured}}">
-          Click to Eat!
+            Click to Eat!
           </button>
         </li>
         {{/unless}}
@@ -49,6 +58,4 @@
     </div>
   </div>
   <hr>
-  
-
 </div>
