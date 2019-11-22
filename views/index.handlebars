@@ -2,14 +2,14 @@
   <a class="navbar-brand " href="/"><h2>EAT A BURGER</h2></a>
 </nav>
 <div class="container">
-  <div class="row">
+  <div class="row mt-5">
     <div class="col-md-12 text-center">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores suscipit laudantium, excepturi, incidunt dicta animi fuga veniam sint nesciunt amet harum. Deserunt velit odio et assumenda, temporibus illum minus fuga.</p>
+      <p class="text-muted">This app is a burger logger with <strong> MySQL, Node, Express, Handlebars</strong> and a homemade <strong>ORM</strong>  following the <strong> MVC</strong> design pattern; using Node and MySQL to query and route data in app, and Handlebars to generate HTML.</p>
     </div>
   </div>
   <div class="row text-center">
     <div class="col-md-6">
-      <h2>Burgers served!</h2>
+      <h3>Burgers served!</h3>
       <ul>
         {{#each burger}}
         {{#unless devoured}}
@@ -24,7 +24,7 @@
       </ul>
     </div>
     <div class="col-md-6">
-      <h2>Eaten Burgers!</h2>
+      <h3>Eaten Burgers!</h3>
 
       <ul>
         {{#each burger}}
