@@ -13,7 +13,7 @@
         <div class="form-group">
           <label for="ca"><h3>Order burger here:</h3></label>
           <input type="text" id="ca" name="name">
-        <button type="submit">Order Up!</button>
+        <button type="submit" class="btn btn-secondary">Order Up</button>
         </div>
       </form>
     </div>
@@ -25,9 +25,9 @@
         {{#each burger}}
         {{#unless devoured}}
         <li>
-          {{burger_name}}
-          <button class="devoured" data-id="{{id}}" data-devoured="{{devoured}}">
-            eat!
+         <span class="mr-3">Burger name : <strong>{{burger_name}}</strong> </span> 
+          <button class="devoured btn btn-success" data-id="{{id}}" data-devoured="{{devoured}}">
+          Click to Eat!
           </button>
         </li>
         {{/unless}}
